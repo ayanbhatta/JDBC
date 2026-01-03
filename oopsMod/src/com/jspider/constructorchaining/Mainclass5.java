@@ -10,7 +10,8 @@ class Alpha{
 class Beta extends Alpha{
 	
 	Beta(){
-		super(10);
+		super(10);	//if we do not use super by default it will take Alpha()
+					//passing super with args will invoke Alpha(int) constructor.
 		System.out.println("Beta Constructor");
 	}
 }
