@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class InresrRecord {
+public class UpdateStudent {
 
 	public static void main(String[] args) {
 		Connection con = null;
@@ -15,7 +15,7 @@ public class InresrRecord {
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3307?user=root&password=Admin@123");
 			System.out.println("connection established");
 			stmt = con.createStatement();
-			stmt.executeUpdate("insert into btm.student values(3,'Harry',60);");
+			stmt.executeUpdate("update btm.student set marks='78' where id=1;");
 			System.out.println("Record inserted");
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
@@ -41,4 +41,5 @@ public class InresrRecord {
 			}
 		}
 	}
+
 }
