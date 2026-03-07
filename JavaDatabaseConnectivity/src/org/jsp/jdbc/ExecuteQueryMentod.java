@@ -24,7 +24,8 @@ public class ExecuteQueryMentod {
 				int sid = rs.getInt("id");
 				String sname = rs.getString("names");
 				double smarks = rs.getDouble("marks");
-				System.out.println(sid + "\t" + sname + "\t" + smarks);
+				System.out.print(sid + "\t" + sname + "\t" + smarks);
+				System.out.println();
 			}
 			System.out.println("Record inserted");
 		} catch (ClassNotFoundException | SQLException e) {
